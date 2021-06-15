@@ -3,7 +3,7 @@
 ## Step 1 
 Setup the Bitbot
 
-First we will get the "select bitbit modle" block from the "select bitbit modle" tab
+First we will get the "select bitbot model" block from the "select bitbit model" tab
 and place it in the "on start" block.
 
 ```blocks
@@ -12,9 +12,9 @@ bitbot.select_model(BBModel.Classic)
 ## Step 2 
 Create the variable's 
 
-Fires we need to create a variable for ecah sensor.
+First we need to create a variable for ecah sensor.
 Go to the "variable" tab and create a variable called "right_light_sensor" then create another called "Left_light_sensor".
-Then select the "set to" block from the "variable" tab amd plce it in the "forever" block.
+Then select the "set to" block from the "variable" tab and place it in the "forever" block.
 Do this again but this time use the dropdown tab to change to the "Left_light_sensor"
 
 ```block
@@ -88,12 +88,12 @@ basic.forever(function () {
 ## Step 6 
 Continue making decisions
 
-In this step need to do almost the same as the last setp so we are going to copy the combined block that we placed in the first "true" section of the "if then else" block.
+In this step we need to do almost the same as the last setp so we are going to copy the combined block that we placed in the first "true" section of the "if then else" block.
 Place your curser the the middle of the "if and "then" section of the "if then" block. You should see the block you droped iin highlited.
 Make sure the entire block is highlited not just part of it.
 Right click and select "duplicate".
 We now need to change the numbers in the block to read "left_line_sensor=0 and right_light_sensor=1".
-Move the newly created block and replacrthe "true" in the "else if" section of the "if then else" block
+Move the newly created block and replace the "true" in the "else if" section of the "if then else" block
 
 ```block
 let left_line_sensor = 0
@@ -114,10 +114,10 @@ Motor Controll
 
 Start by going to the "bitbot" then "motors" tab and find the "spin at speed %" block and place 4 of them in the workspace.
 Set 2 using the dropdown tab to "left" and 2 of then to "right".
-For the Left motors set one to 60% and one to 30% and do the same for the right motors.
+For the left motors set one to 60% and one to 30% and do the same for the right motors.
 Now we need to combine them into the code.
-Join Left 30% and right 60% together and place them under the "if then section of the "if then else" block.
-Join Left 60% and right 30% together and place them under the "else if" section of the "if then else" block.
+Join left 30% and right 60% together and place them under the "if then section of the "if then else" block.
+Join left 60% and right 30% together and place them under the "else if" section of the "if then else" block.
 
 ```block
 let left_line_sensor = 0
